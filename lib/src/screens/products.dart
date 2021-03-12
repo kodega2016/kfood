@@ -66,7 +66,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
-                childAspectRatio: 4 / 3,
+                childAspectRatio: 1.2,
               ),
               itemBuilder: (context, i) {
                 final _product = products[i];
@@ -81,7 +81,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                 final _product = products[i];
                 return Container(
                   padding: const EdgeInsets.all(10),
-                  height: 110,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey[300]),
                     borderRadius: BorderRadius.circular(8),

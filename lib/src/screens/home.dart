@@ -27,12 +27,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      appBar: AppBar(
-        title: Text('Food Cart'),
-        centerTitle: true,
-      ),
       body: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: EdgeInsets.only(
+          left: 10,
+          right: 10,
+          top: MediaQuery.of(context).padding.top + 10,
+        ),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
