@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kfood/src/models/category.dart';
 import 'package:kfood/src/models/product.dart';
+import 'package:kfood/src/routes.dart';
 import 'package:kfood/src/widgets/category/category_list_tile.dart';
 import 'package:kfood/src/widgets/products/product_banner_item.dart';
 import 'package:kfood/src/widgets/products/products_with_title.dart';
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
               ListTile(
                 title: Text('Sign In'),
                 leading: Icon(Icons.lock_open_outlined),
+                onTap: () => Navigator.pushNamed(context, Routes.login),
               ),
               ListTile(
                 title: Text('About Us'),

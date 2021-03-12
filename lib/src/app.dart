@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kfood/src/routes.dart';
+import 'package:kfood/src/screens/login.dart';
 import 'page_setup.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,6 +15,10 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.acme().fontFamily,
       ),
       home: PageSetup(),
+      routes: {
+        Routes.login: (ctx) => LoginScreen(),
+      },
+      onGenerateRoute: Routes.onGenerate,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kfood/src/screens/profile.dart';
 
 import 'screens/cart.dart';
 import 'screens/home.dart';
@@ -16,6 +17,7 @@ class _PageSetupState extends State<PageSetup> {
     HomeScreen(),
     WishListScreen(),
     CartScreen(),
+    ProfileScreen(),
   ];
 
   @override
@@ -26,6 +28,9 @@ class _PageSetupState extends State<PageSetup> {
         currentIndex: _page,
         onTap: _changePage,
         backgroundColor: Colors.white,
+        selectedItemColor: Theme.of(context).primaryColor,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
         elevation: 4.0,
         items: [
           BottomNavigationBarItem(
@@ -39,6 +44,10 @@ class _PageSetupState extends State<PageSetup> {
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag_outlined),
             label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
       ),

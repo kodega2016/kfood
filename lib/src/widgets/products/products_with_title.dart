@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kfood/src/models/product.dart';
+import 'package:kfood/src/routes.dart';
 import 'product_tile.dart';
 
 class ProductWithTitle extends StatelessWidget {
@@ -29,7 +30,7 @@ class ProductWithTitle extends StatelessWidget {
                     ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushNamed(context, Routes.products),
                 child: Text(
                   "View All",
                   style: TextStyle(color: Colors.black),

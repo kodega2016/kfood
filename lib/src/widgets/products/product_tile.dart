@@ -8,6 +8,7 @@ class ProductTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(6),
       height: 140,
       width: (MediaQuery.of(context).size.width - 10) / 2,
       margin: EdgeInsets.only(right: 10),
@@ -38,10 +39,24 @@ class ProductTile extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                          child: Text("NRs ${product.newPrice}", maxLines: 1),
+                          child: Text(
+                            "NRs ${product.newPrice}",
+                            maxLines: 1,
+                            style: Theme.of(context)
+                                .textTheme
+                                .caption
+                                .copyWith(color: Colors.orangeAccent),
+                          ),
                         ),
                         Expanded(
-                          child: Text("NRs ${product.oldPrice}", maxLines: 1),
+                          child: Text(
+                            "NRs ${product.oldPrice}",
+                            maxLines: 1,
+                            style: Theme.of(context).textTheme.caption.copyWith(
+                                  color: Colors.grey,
+                                  decoration: TextDecoration.lineThrough,
+                                ),
+                          ),
                         ),
                       ],
                     ),
